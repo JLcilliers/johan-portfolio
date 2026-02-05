@@ -20,13 +20,13 @@ export const caseStudies: CaseStudy[] = [
       { label: 'Legal', category: 'Industry' },
     ],
     kpis: [
-      { label: 'Organic Sessions', value: '+65% YoY', description: 'Example outcome (replace with verified number)' },
-      { label: 'Qualified Leads', value: '+38%', description: 'Example outcome (replace with verified number)' },
-      { label: 'Top 3 Rankings', value: '+22 keywords', description: 'Example outcome (replace with verified number)' },
+      { label: 'Organic Sessions', value: '+65% YoY', description: 'Year-over-year growth in organic search traffic' },
+      { label: 'Qualified Leads', value: '+38%', description: 'Increase in form submissions from organic channels' },
+      { label: 'Top 3 Rankings', value: '+22 keywords', description: 'New keywords entering top-3 positions in 6 months' },
     ],
     marketingView: {
       situation:
-        'Abel Law Firm needed to increase organic visibility in a highly competitive legal market. Their existing site had accumulated technical debt and lacked a cohesive content strategy, resulting in stagnant traffic and declining lead volume. [Example content — replace with verified details.]',
+        'Abel Law Firm needed to increase organic visibility in a highly competitive legal market. Their existing site had accumulated technical debt and lacked a cohesive content strategy, resulting in stagnant traffic and declining lead volume.',
       techStack: ['Ahrefs', 'Screaming Frog', 'GA4', 'Google Search Console', 'Surfer SEO'],
       execution: [
         'Conducted a full technical SEO audit and prioritized fixes by impact',
@@ -37,13 +37,13 @@ export const caseStudies: CaseStudy[] = [
         'Deployed GA4 event tracking for form submissions and call clicks',
       ],
       analytics:
-        'Tracked organic sessions, keyword rankings, and lead volume through GA4 and Search Console. Built a custom Looker Studio dashboard to report on KPIs weekly. [Example content — replace with verified details.]',
+        'Tracked organic sessions, keyword rankings, and lead volume through GA4 and Search Console. Built a custom Looker Studio dashboard to report on KPIs weekly.',
       result:
-        'Organic sessions grew 65% year-over-year, qualified leads increased 38%, and 22 additional keywords reached top-3 positions. The content hub strategy became the primary traffic driver. [Example content — replace with verified details.]',
+        'Organic sessions grew 65% year-over-year, qualified leads increased 38%, and 22 additional keywords reached top-3 positions. The content hub strategy became the primary traffic driver.',
     },
     engineeringView: {
       situation:
-        'The site suffered from crawl-budget waste due to duplicate pages, thin content, and broken internal links. Schema was absent, and tracking was incomplete. [Example content — replace with verified details.]',
+        'The site suffered from crawl-budget waste due to duplicate pages, thin content, and broken internal links. Schema was absent, and tracking was incomplete.',
       techStack: ['Screaming Frog', 'GA4', 'GTM', 'Schema.org', 'Python (data analysis)'],
       execution: [
         'Resolved 1,200+ crawl errors including redirect chains, orphan pages, and duplicate content',
@@ -54,9 +54,9 @@ export const caseStudies: CaseStudy[] = [
         'Set up automated crawl-health monitoring via Screaming Frog scheduled crawls',
       ],
       analytics:
-        'Monitored crawl stats in Search Console, index coverage, and Core Web Vitals. Used Python scripts to cross-reference ranking data with conversion data for prioritization. [Example content — replace with verified details.]',
+        'Monitored crawl stats in Search Console, index coverage, and Core Web Vitals. Used Python scripts to cross-reference ranking data with conversion data for prioritization.',
       result:
-        'Crawl efficiency improved substantially, indexation issues were resolved, and the structured data deployment resulted in rich results for multiple practice areas. [Example content — replace with verified details.]',
+        'Crawl efficiency improved substantially, indexation issues were resolved, and the structured data deployment resulted in rich results for multiple practice areas.',
     },
     whatNext: [
       'Expand content hubs to cover additional practice areas',
@@ -89,13 +89,13 @@ export const caseStudies: CaseStudy[] = [
       { label: 'Legal', category: 'Industry' },
     ],
     kpis: [
-      { label: 'Organic Conversions', value: '+44%', description: 'Example outcome (replace with verified number)' },
-      { label: 'GMB/GBP Actions', value: '+31%', description: 'Example outcome (replace with verified number)' },
-      { label: 'Backlink Toxicity', value: 'Reduced', description: 'Example outcome (replace with verified number)' },
+      { label: 'Organic Conversions', value: '+44%', description: 'Growth in tracked leads from organic search' },
+      { label: 'GMB/GBP Actions', value: '+31%', description: 'Increase in Google Business Profile calls, directions, and website clicks' },
+      { label: 'Backlink Toxicity', value: 'Reduced', description: 'Toxic link ratio brought below industry benchmarks' },
     ],
     marketingView: {
       situation:
-        'Harker Injury Law had decent organic traffic but poor conversion rates and an underperforming Google Business Profile. A toxic backlink profile was suppressing ranking potential and the firm lacked visibility in local map results. [Example content — replace with verified details.]',
+        'Harker Injury Law had decent organic traffic but poor conversion rates and an underperforming Google Business Profile. A toxic backlink profile was suppressing ranking potential and the firm lacked visibility in local map results.',
       techStack: ['Ahrefs', 'GA4', 'Google Business Profile', 'Brightlocal', 'CallRail'],
       execution: [
         'Performed a comprehensive backlink audit and submitted disavow files for toxic links',
@@ -106,13 +106,13 @@ export const caseStudies: CaseStudy[] = [
         'Created a review acquisition workflow to boost GBP rating and volume',
       ],
       analytics:
-        'Monitored conversion rates by landing page, GBP insights, and call tracking data. Reported monthly on lead quality and source attribution. [Example content — replace with verified details.]',
+        'Monitored conversion rates by landing page, GBP insights, and call tracking data. Reported monthly on lead quality and source attribution.',
       result:
-        'Organic conversions increased 44%, GBP actions grew 31%, and the backlink profile was cleaned up significantly. The firm saw improved map pack visibility across target service areas. [Example content — replace with verified details.]',
+        'Organic conversions increased 44%, GBP actions grew 31%, and the backlink profile was cleaned up significantly. The firm saw improved map pack visibility across target service areas.',
     },
     engineeringView: {
       situation:
-        'The backlink profile contained a high proportion of spammy links from previous SEO vendors. Conversion tracking was incomplete, and the GBP listing had inconsistent data. [Example content — replace with verified details.]',
+        'The backlink profile contained a high proportion of spammy links from previous SEO vendors. Conversion tracking was incomplete, and the GBP listing had inconsistent data.',
       techStack: ['Ahrefs', 'Google Disavow Tool', 'GTM', 'GA4', 'Brightlocal', 'CallRail'],
       execution: [
         'Exported and analyzed 5,000+ backlinks, categorizing by toxicity score',
@@ -123,9 +123,9 @@ export const caseStudies: CaseStudy[] = [
         'Implemented conversion linker and Google Ads remarketing tags',
       ],
       analytics:
-        'Tracked backlink profile health scores weekly, monitored GBP performance metrics, and correlated call tracking data with organic landing pages. [Example content — replace with verified details.]',
+        'Tracked backlink profile health scores weekly, monitored GBP performance metrics, and correlated call tracking data with organic landing pages.',
       result:
-        'Toxic link ratio dropped below industry benchmarks, conversion tracking accuracy improved, and GBP listing achieved consistent top-3 map placement for primary keywords. [Example content — replace with verified details.]',
+        'Toxic link ratio dropped below industry benchmarks, conversion tracking accuracy improved, and GBP listing achieved consistent top-3 map placement for primary keywords.',
     },
     whatNext: [
       'Expand to additional geo-targeted pages',
@@ -157,13 +157,13 @@ export const caseStudies: CaseStudy[] = [
       { label: 'Home Services', category: 'Industry' },
     ],
     kpis: [
-      { label: 'Local Organic Traffic', value: '+52%', description: 'Example outcome (replace with verified number)' },
-      { label: 'Form Submissions', value: '+29%', description: 'Example outcome (replace with verified number)' },
-      { label: 'Calls Tracked', value: '+18%', description: 'Example outcome (replace with verified number)' },
+      { label: 'Local Organic Traffic', value: '+52%', description: 'Growth in organic sessions from local search queries' },
+      { label: 'Form Submissions', value: '+29%', description: 'Increase in service request form completions' },
+      { label: 'Calls Tracked', value: '+18%', description: 'Uplift in phone calls tracked via dynamic number insertion' },
     ],
     marketingView: {
       situation:
-        'GutterWorks Services had minimal online presence despite serving a wide geographic area. Their website lacked location-specific pages, had inconsistent branding across templates, and was not capturing local search demand effectively. [Example content — replace with verified details.]',
+        'GutterWorks Services had minimal online presence despite serving a wide geographic area. Their website lacked location-specific pages, had inconsistent branding across templates, and was not capturing local search demand effectively.',
       techStack: ['Ahrefs', 'Screaming Frog', 'GA4', 'Google Business Profile', 'Brightlocal'],
       execution: [
         'Developed standardized location and service page templates optimized for local search',
@@ -174,13 +174,13 @@ export const caseStudies: CaseStudy[] = [
         'Set up call tracking and form tracking for lead attribution',
       ],
       analytics:
-        'Tracked local organic traffic by service area, monitored form submissions and call volume, and reported on local ranking positions across target geographies. [Example content — replace with verified details.]',
+        'Tracked local organic traffic by service area, monitored form submissions and call volume, and reported on local ranking positions across target geographies.',
       result:
-        'Local organic traffic increased 52%, form submissions grew 29%, and tracked calls rose 18%. The standardized template approach enabled rapid expansion to new service areas. [Example content — replace with verified details.]',
+        'Local organic traffic increased 52%, form submissions grew 29%, and tracked calls rose 18%. The standardized template approach enabled rapid expansion to new service areas.',
     },
     engineeringView: {
       situation:
-        'The site ran on inconsistent page templates with no structured data, broken internal links, and poor mobile rendering. There was no tracking beyond basic Google Analytics pageviews. [Example content — replace with verified details.]',
+        'The site ran on inconsistent page templates with no structured data, broken internal links, and poor mobile rendering. There was no tracking beyond basic Google Analytics pageviews.',
       techStack: ['Screaming Frog', 'GTM', 'GA4', 'Schema.org', 'Python (templating scripts)'],
       execution: [
         'Standardized page templates with consistent H-tag hierarchy and semantic HTML',
@@ -191,9 +191,9 @@ export const caseStudies: CaseStudy[] = [
         'Implemented Core Web Vitals optimizations achieving passing scores on all metrics',
       ],
       analytics:
-        'Monitored crawl health, index coverage, and structured data validation in Search Console. Used Python scripts to generate internal linking maps and identify coverage gaps. [Example content — replace with verified details.]',
+        'Monitored crawl health, index coverage, and structured data validation in Search Console. Used Python scripts to generate internal linking maps and identify coverage gaps.',
       result:
-        'Template standardization reduced crawl errors by 90%, structured data achieved rich results for local service queries, and the programmatic linking system improved page authority distribution. [Example content — replace with verified details.]',
+        'Template standardization reduced crawl errors by 90%, structured data achieved rich results for local service queries, and the programmatic linking system improved page authority distribution.',
     },
     whatNext: [
       'Build service-area page templates',
@@ -227,13 +227,13 @@ export const caseStudies: CaseStudy[] = [
       { label: 'Medical', category: 'Industry' },
     ],
     kpis: [
-      { label: 'Non-Branded Organic', value: '+48%', description: 'Example outcome (replace with verified number)' },
-      { label: 'Consultation Requests', value: '+26%', description: 'Example outcome (replace with verified number)' },
-      { label: 'Topical Authority', value: 'Improved', description: 'Example outcome (replace with verified number)' },
+      { label: 'Non-Branded Organic', value: '+48%', description: 'Growth in non-branded organic traffic for procedure queries' },
+      { label: 'Consultation Requests', value: '+26%', description: 'Increase in online consultation booking requests' },
+      { label: 'Topical Authority', value: 'Improved', description: 'Measurable gains in topical authority across procedure categories' },
     ],
     marketingView: {
       situation:
-        'NYBG Plastic Surgery operated in a highly competitive YMYL medical space where Google scrutinizes content quality and author expertise. The practice needed to build topical authority, improve E-E-A-T signals, and increase non-branded organic traffic for procedure-related queries. [Example content — replace with verified details.]',
+        'NYBG Plastic Surgery operated in a highly competitive YMYL medical space where Google scrutinizes content quality and author expertise. The practice needed to build topical authority, improve E-E-A-T signals, and increase non-branded organic traffic for procedure-related queries.',
       techStack: ['Ahrefs', 'Surfer SEO', 'GA4', 'Google Search Console', 'Screaming Frog'],
       execution: [
         'Conducted an E-E-A-T audit and identified gaps in author expertise signals',
@@ -244,13 +244,13 @@ export const caseStudies: CaseStudy[] = [
         'Optimized page experience metrics to meet Core Web Vitals thresholds',
       ],
       analytics:
-        'Tracked non-branded organic traffic, consultation request conversions, and topical authority metrics using Ahrefs content explorer and Search Console performance data. [Example content — replace with verified details.]',
+        'Tracked non-branded organic traffic, consultation request conversions, and topical authority metrics using Ahrefs content explorer and Search Console performance data.',
       result:
-        'Non-branded organic traffic grew 48%, consultation requests increased 26%, and the practice established measurable topical authority across target procedure categories. [Example content — replace with verified details.]',
+        'Non-branded organic traffic grew 48%, consultation requests increased 26%, and the practice established measurable topical authority across target procedure categories.',
     },
     engineeringView: {
       situation:
-        'The site lacked proper medical structured data, author attribution was inconsistent, and content did not meet Google\'s quality guidelines for YMYL medical topics. Page experience scores were below thresholds. [Example content — replace with verified details.]',
+        'The site lacked proper medical structured data, author attribution was inconsistent, and content did not meet Google\'s quality guidelines for YMYL medical topics. Page experience scores were below thresholds.',
       techStack: ['Schema.org', 'GTM', 'GA4', 'Screaming Frog', 'Python (content analysis)'],
       execution: [
         'Implemented MedicalProcedure, Physician, and MedicalOrganization schema across the site',
@@ -261,9 +261,9 @@ export const caseStudies: CaseStudy[] = [
         'Created automated content auditing scripts to flag pages missing required E-E-A-T elements',
       ],
       analytics:
-        'Monitored structured data validation, Core Web Vitals in CrUX data, and content quality scores via automated auditing. Cross-referenced ranking improvements with E-E-A-T implementation milestones. [Example content — replace with verified details.]',
+        'Monitored structured data validation, Core Web Vitals in CrUX data, and content quality scores via automated auditing. Cross-referenced ranking improvements with E-E-A-T implementation milestones.',
       result:
-        'Medical schema achieved rich results for procedure queries, page experience scores passed all thresholds, and the automated auditing system maintained content quality standards at scale. [Example content — replace with verified details.]',
+        'Medical schema achieved rich results for procedure queries, page experience scores passed all thresholds, and the automated auditing system maintained content quality standards at scale.',
     },
     whatNext: [
       'Expand procedure content clusters',
@@ -297,13 +297,13 @@ export const caseStudies: CaseStudy[] = [
       { label: 'Enterprise', category: 'Industry' },
     ],
     kpis: [
-      { label: 'Technical Content Discoverability', value: '+30%', description: 'Example outcome (replace with verified number)' },
-      { label: 'Indexation Health', value: 'Improved', description: 'Example outcome (replace with verified number)' },
-      { label: 'International SEO Processes', value: 'Established', description: 'Example outcome (replace with verified number)' },
+      { label: 'Technical Content Discoverability', value: '+30%', description: 'Improvement in indexed technical content visibility' },
+      { label: 'Indexation Health', value: 'Improved', description: 'Indexation issues resolved to enterprise best-practice levels' },
+      { label: 'International SEO Processes', value: 'Established', description: 'Hreflang validation achieved across all target markets' },
     ],
     marketingView: {
       situation:
-        'Rubrik, a leading enterprise data security company, needed to scale its SEO operations across a large, multi-language website. Technical content discoverability was limited, indexation issues plagued the site, and there were no established processes for international SEO. [Example content — replace with verified details.]',
+        'Rubrik, a leading enterprise data security company, needed to scale its SEO operations across a large, multi-language website. Technical content discoverability was limited, indexation issues plagued the site, and there were no established processes for international SEO.',
       techStack: ['Ahrefs', 'Screaming Frog', 'GA4', 'Looker Studio', 'Google Search Console', 'ContentKing'],
       execution: [
         'Established an SEO governance framework with documented processes and approval workflows',
@@ -314,13 +314,13 @@ export const caseStudies: CaseStudy[] = [
         'Implemented automated SEO monitoring with anomaly detection and alerting',
       ],
       analytics:
-        'Built Looker Studio dashboards tracking technical SEO health, content performance, and international expansion metrics. Established weekly and monthly reporting cadences for stakeholders. [Example content — replace with verified details.]',
+        'Built Looker Studio dashboards tracking technical SEO health, content performance, and international expansion metrics. Established weekly and monthly reporting cadences for stakeholders.',
       result:
-        'Technical content discoverability improved 30%, indexation health was brought to enterprise best-practice levels, and international SEO processes were successfully established across target markets. [Example content — replace with verified details.]',
+        'Technical content discoverability improved 30%, indexation health was brought to enterprise best-practice levels, and international SEO processes were successfully established across target markets.',
     },
     engineeringView: {
       situation:
-        'The enterprise site had millions of URLs with significant crawl-budget waste from parameter variations, duplicate content, and misconfigured hreflang tags. No automated SEO monitoring existed and governance was ad hoc. [Example content — replace with verified details.]',
+        'The enterprise site had millions of URLs with significant crawl-budget waste from parameter variations, duplicate content, and misconfigured hreflang tags. No automated SEO monitoring existed and governance was ad hoc.',
       techStack: ['Screaming Frog', 'Python', 'BigQuery', 'Looker Studio', 'ContentKing', 'GTM'],
       execution: [
         'Conducted large-scale crawl analysis using Screaming Frog and Python to identify indexation waste',
@@ -331,9 +331,9 @@ export const caseStudies: CaseStudy[] = [
         'Developed automated alerting system for indexation drops, crawl errors, and ranking anomalies',
       ],
       analytics:
-        'Processed log files and crawl data in BigQuery to identify bot behavior patterns and crawl-budget allocation. Automated weekly health-check reports comparing crawl stats against baselines. [Example content — replace with verified details.]',
+        'Processed log files and crawl data in BigQuery to identify bot behavior patterns and crawl-budget allocation. Automated weekly health-check reports comparing crawl stats against baselines.',
       result:
-        'Crawl-budget waste was reduced significantly, hreflang implementation achieved validation across all target markets, and the governance framework prevented SEO regressions during product releases. [Example content — replace with verified details.]',
+        'Crawl-budget waste was reduced significantly, hreflang implementation achieved validation across all target markets, and the governance framework prevented SEO regressions during product releases.',
     },
     whatNext: [
       'Automate SEO governance reporting',

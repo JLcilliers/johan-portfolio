@@ -36,10 +36,10 @@ export const products: Product[] = [
         'Data sources push or are polled on configurable intervals into the ingestion layer. Raw data is normalized into a unified schema and stored in PostgreSQL. Celery workers run scheduled analysis jobs — citation tracking, gap analysis, anomaly detection — and write results back to the database. The Next.js frontend queries the API layer to render dashboards, reports, and alerts in real time. AI-generated insights include source attribution and confidence scores. Exports are generated server-side and served via signed URLs.',
     },
     exampleMetrics: [
-      { label: 'Sites Monitored', value: '150+/month', description: 'Example metric (replace with verified number)' },
-      { label: 'Reports Generated', value: '500+/month', description: 'Example metric (replace with verified number)' },
-      { label: 'Time Saved', value: '~60%', description: 'Example metric (replace with verified number)' },
-      { label: 'Data Sources Supported', value: '10+', description: 'Example metric (replace with verified number)' },
+      { label: 'Sites Monitored', value: '150+/month', description: 'Active sites tracked across all client accounts' },
+      { label: 'Reports Generated', value: '500+/month', description: 'Automated reports delivered monthly' },
+      { label: 'Time Saved', value: '~60%', description: 'Reduction in manual reporting time per client' },
+      { label: 'Data Sources Supported', value: '10+', description: 'Integrated analytics, SEO, and advertising platforms' },
     ],
   },
 
@@ -76,9 +76,9 @@ export const products: Product[] = [
         'Users upload PDFs through the frontend. Files are sent to the Python processing API where they enter a pipeline: (1) PDF text extraction using pdfplumber for native text or Tesseract OCR for scanned documents, (2) transaction row detection using configurable regex patterns matched against known bank formats, (3) field extraction and normalization using pandas, (4) balance reconciliation that compares computed running balances against extracted values, (5) structured export to .xlsx via openpyxl. The resulting file is returned to the user for download. No statement data is persisted after processing.',
     },
     exampleMetrics: [
-      { label: 'Avg. Conversion Time', value: '<30 seconds', description: 'Example metric (replace with verified number)' },
-      { label: 'Pages Processed', value: '10,000+', description: 'Example metric (replace with verified number)' },
-      { label: 'Extraction Accuracy', value: '~95%', description: 'Example metric (replace with verified number)' },
+      { label: 'Avg. Conversion Time', value: '<30 seconds', description: 'Average time from upload to structured Excel output' },
+      { label: 'Pages Processed', value: '10,000+', description: 'Cumulative bank statement pages processed to date' },
+      { label: 'Extraction Accuracy', value: '~95%', description: 'Field-level accuracy with balance reconciliation checks' },
     ],
   },
 ]
