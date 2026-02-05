@@ -1,4 +1,5 @@
 import { kvGet, kvSet, type CVChunk } from './kv'
+import staticChunks from '@/data/cv-chunks.json'
 
 export function chunkText(text: string, chunkSize = 800, overlap = 100): string[] {
   const chunks: string[] = []
@@ -78,7 +79,11 @@ export async function embedAndStore(text: string): Promise<{ chunks: number; tok
 }
 
 export async function searchChunks(query: string, topK = 5): Promise<CVChunk[]> {
-  const chunks = await kvGet<CVChunk[]>('cv:chunks')
+  // Try KV first (for dynamic uploads), fall back to static chunks
+  let chunks = await kvGet<CVChunk[]>('cv:chunks')
+  if (!chunks || chunks.length === 0) {
+    chunks = staticChunks as CVChunk[]
+  }
 
   if (!chunks || chunks.length === 0) return []
 
