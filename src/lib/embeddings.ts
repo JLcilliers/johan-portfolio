@@ -23,6 +23,10 @@ export async function embedText(text: string): Promise<number[]> {
       input: text,
     }),
   })
+  if (!res.ok) {
+    const errBody = await res.text()
+    throw new Error(`OpenAI API error ${res.status}: ${errBody}`)
+  }
   const data = await res.json()
   return data.data[0].embedding
 }

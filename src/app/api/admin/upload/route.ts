@@ -56,7 +56,13 @@ export async function POST(req: NextRequest) {
     }
 
     // Chunk and embed
-    const result = await embedAndStore(text)
+    let result: { chunks: number; tokens: number }
+    try {
+      result = await embedAndStore(text)
+    } catch (e) {
+      console.error('Embedding error:', e)
+      return NextResponse.json({ error: `Embedding failed: ${e instanceof Error ? e.message : String(e)}` }, { status: 500 })
+    }
 
     return NextResponse.json({
       success: true,
@@ -65,6 +71,6 @@ export async function POST(req: NextRequest) {
     })
   } catch (error) {
     console.error('Upload error:', error)
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
+    return NextResponse.json({ error: `Internal server error: ${error instanceof Error ? error.message : String(error)}` }, { status: 500 })
   }
 }
