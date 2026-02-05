@@ -74,8 +74,13 @@ ${context}`,
     if (!response.ok) {
       const errBody = await response.text()
       console.error('OpenAI chat error:', response.status, errBody)
+      // Fallback: return the most relevant chunk content directly
+      const summary = chunks
+        .slice(0, 3)
+        .map((c) => c.text.replace(/\n+/g, ' ').trim())
+        .join('\n\n')
       return NextResponse.json({
-        content: "I found relevant CV information but couldn't generate a response right now. The AI service may be temporarily unavailable. Please try again later.",
+        content: `Here's what I found in Johan's CV:\n\n${summary}`,
         sources: chunks.slice(0, 3).map((c) => ({
           id: c.id,
           excerpt: c.text.slice(0, 80) + '...',
