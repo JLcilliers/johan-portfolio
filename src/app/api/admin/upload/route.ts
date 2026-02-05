@@ -40,10 +40,9 @@ export async function POST(req: NextRequest) {
     // Extract text from PDF
     let text: string
     try {
-      const { PDFParse } = await import('pdf-parse')
-      const parser = new PDFParse({ data: new Uint8Array(buffer), verbosity: 0 })
-      const data = await parser.getText()
-      text = data.pages.map((p: { text: string }) => p.text).join('\n')
+      const { extractText } = await import('unpdf')
+      const { text: pages } = await extractText(new Uint8Array(buffer))
+      text = pages.join('\n')
     } catch (e) {
       console.error('PDF parse error:', e)
       return NextResponse.json({ error: 'Failed to parse PDF' }, { status: 500 })
