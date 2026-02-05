@@ -8,11 +8,6 @@ interface CVChunk {
   meta: Record<string, string>
 }
 
-interface CVEmbedding {
-  id: string
-  embedding: number[]
-}
-
 // In-memory store for local development
 const memoryStore: Record<string, unknown> = {}
 
@@ -46,4 +41,4 @@ export async function kvSet(key: string, value: unknown): Promise<void> {
   memoryStore[key] = value
 }
 
-export type { CVChunk, CVEmbedding }
+export type { CVChunk }

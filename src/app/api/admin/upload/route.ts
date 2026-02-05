@@ -26,14 +26,6 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'File too large (max 10MB)' }, { status: 400 })
     }
 
-    // Check if OpenAI key is configured
-    if (!process.env.OPENAI_API_KEY || process.env.OPENAI_API_KEY === 'sk-placeholder') {
-      return NextResponse.json(
-        { error: 'OpenAI API key not configured. Add OPENAI_API_KEY to your environment variables.' },
-        { status: 500 }
-      )
-    }
-
     // Read file buffer
     const buffer = Buffer.from(await file.arrayBuffer())
 

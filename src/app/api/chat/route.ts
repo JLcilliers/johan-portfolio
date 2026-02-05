@@ -71,6 +71,18 @@ ${context}`,
       }),
     })
 
+    if (!response.ok) {
+      const errBody = await response.text()
+      console.error('OpenAI chat error:', response.status, errBody)
+      return NextResponse.json({
+        content: "I found relevant CV information but couldn't generate a response right now. The AI service may be temporarily unavailable. Please try again later.",
+        sources: chunks.slice(0, 3).map((c) => ({
+          id: c.id,
+          excerpt: c.text.slice(0, 80) + '...',
+        })),
+      })
+    }
+
     const data = await response.json()
     const assistantMessage = data.choices?.[0]?.message?.content || 'Sorry, I could not generate a response.'
 
