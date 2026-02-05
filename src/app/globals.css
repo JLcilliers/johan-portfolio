@@ -1,0 +1,142 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-background: #09090b;
+  --color-foreground: #fafafa;
+  --color-muted: #27272a;
+  --color-muted-foreground: #a1a1aa;
+  --color-border: #27272a;
+  --color-ring: #3b82f6;
+  --color-primary: #3b82f6;
+  --color-primary-foreground: #ffffff;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
+.light body,
+.light {
+  --color-background: #ffffff;
+  --color-foreground: #09090b;
+  --color-muted: #f4f4f5;
+  --color-muted-foreground: #71717a;
+  --color-border: #e4e4e7;
+}
+
+.light body {
+  background-color: #ffffff;
+  color: #09090b;
+}
+
+.light .bg-zinc-950 {
+  background-color: #ffffff;
+}
+
+.light .bg-zinc-950\/80 {
+  background-color: rgb(255 255 255 / 0.8);
+}
+
+.light .bg-zinc-900 {
+  background-color: #f4f4f5;
+}
+
+.light .bg-zinc-900\/50 {
+  background-color: rgb(244 244 245 / 0.5);
+}
+
+.light .bg-zinc-800 {
+  background-color: #e4e4e7;
+}
+
+.light .text-white {
+  color: #09090b;
+}
+
+.light .text-zinc-100 {
+  color: #18181b;
+}
+
+.light .text-zinc-200 {
+  color: #27272a;
+}
+
+.light .text-zinc-300 {
+  color: #3f3f46;
+}
+
+.light .text-zinc-400 {
+  color: #71717a;
+}
+
+.light .text-zinc-500 {
+  color: #a1a1aa;
+}
+
+.light .text-zinc-600 {
+  color: #52525b;
+}
+
+.light .border-zinc-800 {
+  border-color: #e4e4e7;
+}
+
+.light .border-zinc-800\/50 {
+  border-color: rgb(228 228 231 / 0.5);
+}
+
+.light .border-zinc-700 {
+  border-color: #d4d4d8;
+}
+
+/* Animated gradient background */
+@keyframes blob {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(20px, -30px) scale(1.1); }
+  50% { transform: translate(-20px, 20px) scale(0.9); }
+  75% { transform: translate(30px, 10px) scale(1.05); }
+}
+
+.animate-blob {
+  animation: blob 8s infinite ease-in-out;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-blob {
+    animation: none;
+  }
+
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #52525b;
+}
