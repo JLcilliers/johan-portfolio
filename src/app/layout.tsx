@@ -1,22 +1,9 @@
 import type { Metadata, Viewport } from 'next'
 import { headers } from 'next/headers'
-import { Oswald, Source_Sans_3 } from 'next/font/google'
 import './globals.css'
 import { SiteNav } from '@/components/site-nav'
 import { SiteFooter } from '@/components/site-footer'
 import { SITE_URL, siteJsonLd } from '@/lib/site'
-
-const oswald = Oswald({
-  subsets: ['latin'],
-  variable: '--font-oswald',
-  display: 'swap',
-})
-
-const sourceSans = Source_Sans_3({
-  subsets: ['latin'],
-  variable: '--font-source',
-  display: 'swap',
-})
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -54,7 +41,23 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const nonce = (await headers()).get('x-nonce') ?? undefined
 
   return (
-    <html lang="en" className={`${oswald.variable} ${sourceSans.variable}`}>
+    <html lang="en">
+      <head>
+        <link
+          rel="preload"
+          href="/fonts/oswald-latin-var.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/source-sans-3-latin-var.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className="antialiased">
         <script
           type="application/ld+json"

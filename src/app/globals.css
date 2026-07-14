@@ -1,5 +1,44 @@
 @import 'tailwindcss';
 
+/*
+ * Self-hosted variable fonts (latin subsets). The fallback faces carry the
+ * size-adjust metrics next/font generated for Arial, so the swap from
+ * fallback to webfont doesn't shift layout.
+ */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url('/fonts/oswald-latin-var.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Oswald Fallback';
+  src: local('Arial');
+  ascent-override: 146.51%;
+  descent-override: 35.49%;
+  line-gap-override: 0%;
+  size-adjust: 81.43%;
+}
+
+@font-face {
+  font-family: 'Source Sans 3';
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url('/fonts/source-sans-3-latin-var.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Source Sans 3 Fallback';
+  src: local('Arial');
+  ascent-override: 109.21%;
+  descent-override: 42.66%;
+  line-gap-override: 0%;
+  size-adjust: 93.76%;
+}
+
 @theme {
   /* Canvas */
   --color-dark: #221e1a; /* warm near-black, section covers and closing */
@@ -25,8 +64,8 @@
   --color-rule-dark: #3a332c; /* hairlines on dark */
 
   /* Type */
-  --font-display: var(--font-oswald);
-  --font-body: var(--font-source);
+  --font-display: 'Oswald', 'Oswald Fallback', Arial, sans-serif;
+  --font-body: 'Source Sans 3', 'Source Sans 3 Fallback', Arial, sans-serif;
 }
 
 html {
