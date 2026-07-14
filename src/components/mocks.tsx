@@ -763,7 +763,7 @@ export function LicenseControlMock() {
     ['Bank Statement Converter', 'Active', 'bg-[#7fb069]', 'text-[#a3cf96]'],
     ['LocumLink', 'Active', 'bg-[#7fb069]', 'text-[#a3cf96]'],
     ['Marketing site', 'Grace 41h', 'bg-[#d0a94b]', 'text-[#d0a94b]'],
-    ['Trial · Acme Co', 'Locked', 'bg-[#c96a5a]', 'text-[#c96a5a]'],
+    ['Trial · Acme Co', 'Locked', 'bg-[#c96a5a]', 'text-[#d98a7c]'],
   ]
   return (
     <MockFrame
