@@ -86,12 +86,7 @@ export function ClicksChart({ clientName, startMonth, monthly }: Props) {
         strokeLinejoin="round"
         strokeLinecap="round"
       />
-      <circle
-        cx={x(monthly.length - 1)}
-        cy={y(last)}
-        r="5"
-        fill="var(--color-accent-mid)"
-      />
+      <circle cx={x(monthly.length - 1)} cy={y(last)} r="5" fill="var(--color-accent)" />
       {labels.map((label, i) => (
         <text
           key={label}

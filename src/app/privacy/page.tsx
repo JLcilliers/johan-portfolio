@@ -11,20 +11,20 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <div className="bg-cream text-body">
+    <div className="text-bone-muted">
       <div className="mx-auto max-w-[760px] px-5 py-20">
-        <p className="text-[0.72rem] font-semibold uppercase tracking-[0.3em] text-accent-deep">
+        <p className="text-[0.72rem] font-semibold uppercase tracking-[0.3em] text-accent">
           Legal
         </p>
-        <h1 className="mt-2 font-display text-[clamp(2.4rem,6vw,4rem)] font-bold uppercase leading-none text-ink">
+        <h1 className="mt-2 font-display text-[clamp(2.4rem,6vw,4rem)] font-bold uppercase leading-none text-bone">
           Privacy policy
         </h1>
-        <hr className="mt-6 border-t-2 border-ink" />
-        <p className="mt-4 text-sm text-mute">Last updated: July 14, 2026</p>
+        <hr className="mt-6 border-t-2 border-bone/20" />
+        <p className="mt-4 text-sm text-faint">Last updated: July 14, 2026</p>
 
         <div className="mt-8 space-y-8 leading-relaxed">
           <section aria-labelledby="privacy-scope">
-            <h2 id="privacy-scope" className="font-display text-xl font-bold uppercase text-ink">
+            <h2 id="privacy-scope" className="font-display text-xl font-bold uppercase text-bone">
               What this site is
             </h2>
             <p className="mt-3">
@@ -35,7 +35,7 @@ export default function PrivacyPage() {
           </section>
 
           <section aria-labelledby="privacy-collected">
-            <h2 id="privacy-collected" className="font-display text-xl font-bold uppercase text-ink">
+            <h2 id="privacy-collected" className="font-display text-xl font-bold uppercase text-bone">
               What the site collects
             </h2>
             <p className="mt-3">
@@ -49,7 +49,7 @@ export default function PrivacyPage() {
               read how Vercel handles that data in the{' '}
               <a
                 href="https://vercel.com/legal/privacy-policy"
-                className="font-semibold text-accent-deep underline underline-offset-2 hover:text-ink"
+                className="font-semibold text-accent underline underline-offset-2 hover:text-bone"
               >
                 Vercel privacy policy
               </a>
@@ -58,7 +58,7 @@ export default function PrivacyPage() {
           </section>
 
           <section aria-labelledby="privacy-email">
-            <h2 id="privacy-email" className="font-display text-xl font-bold uppercase text-ink">
+            <h2 id="privacy-email" className="font-display text-xl font-bold uppercase text-bone">
               If you email me
             </h2>
             <p className="mt-3">
@@ -70,7 +70,7 @@ export default function PrivacyPage() {
           </section>
 
           <section aria-labelledby="privacy-rights">
-            <h2 id="privacy-rights" className="font-display text-xl font-bold uppercase text-ink">
+            <h2 id="privacy-rights" className="font-display text-xl font-bold uppercase text-bone">
               Your rights
             </h2>
             <p className="mt-3">
@@ -82,7 +82,7 @@ export default function PrivacyPage() {
           </section>
 
           <section aria-labelledby="privacy-changes">
-            <h2 id="privacy-changes" className="font-display text-xl font-bold uppercase text-ink">
+            <h2 id="privacy-changes" className="font-display text-xl font-bold uppercase text-bone">
               Changes and contact
             </h2>
             <p className="mt-3">
@@ -90,7 +90,7 @@ export default function PrivacyPage() {
               analytics), this page will be updated first. Questions go to{' '}
               <a
                 href="mailto:johanlcilliers@gmail.com"
-                className="font-semibold text-accent-deep underline underline-offset-2 hover:text-ink"
+                className="font-semibold text-accent underline underline-offset-2 hover:text-bone"
               >
                 johanlcilliers@gmail.com
               </a>

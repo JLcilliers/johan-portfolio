@@ -6,70 +6,92 @@
  * fallback to webfont doesn't shift layout.
  */
 @font-face {
-  font-family: 'Oswald';
+  font-family: 'Archivo';
   font-style: normal;
-  font-weight: 200 700;
+  font-weight: 100 900;
+  font-stretch: 100%;
   font-display: swap;
-  src: url('/fonts/oswald-latin-var.woff2') format('woff2');
+  src: url('/fonts/archivo-latin-var.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Oswald Fallback';
+  font-family: 'Archivo Fallback';
   src: local('Arial');
-  ascent-override: 146.51%;
-  descent-override: 35.49%;
+  ascent-override: 88.96%;
+  descent-override: 21.28%;
   line-gap-override: 0%;
-  size-adjust: 81.43%;
+  size-adjust: 98.7%;
 }
 
 @font-face {
-  font-family: 'Source Sans 3';
+  font-family: 'Mulish';
   font-style: normal;
-  font-weight: 200 900;
+  font-weight: 200 1000;
   font-display: swap;
-  src: url('/fonts/source-sans-3-latin-var.woff2') format('woff2');
+  src: url('/fonts/mulish-latin-var.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Source Sans 3 Fallback';
+  font-family: 'Mulish Fallback';
   src: local('Arial');
-  ascent-override: 109.21%;
-  descent-override: 42.66%;
+  ascent-override: 96.56%;
+  descent-override: 24.02%;
   line-gap-override: 0%;
-  size-adjust: 93.76%;
+  size-adjust: 104.08%;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 100 800;
+  font-display: swap;
+  src: url('/fonts/jetbrains-mono-latin-var.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'JetBrains Mono Fallback';
+  src: local('Arial');
+  ascent-override: 75.79%;
+  descent-override: 22.29%;
+  line-gap-override: 0%;
+  size-adjust: 134.59%;
 }
 
 @theme {
   /* Canvas */
-  --color-dark: #221e1a; /* warm near-black, section covers and closing */
-  --color-dark-panel: #2b2521; /* raised panel on dark */
-  --color-dark-inset: #191512; /* mock bezels, table header bar */
-  --color-cream: #e8e2d8; /* warm bone, content pages */
-  --color-cream-row: #ddd5c6; /* alternating table row tint */
+  --color-dark: #1f1c18; /* page background */
+  --color-dark-panel: #262320; /* raised cards on dark */
+  --color-dark-inset: #191512; /* mock bezels, deepest surfaces */
+  --color-cream: #e9e3d5; /* chart panels and light mock surfaces */
+  --color-cream-row: #ddd5c6; /* alternating light table row tint */
 
   /* Text */
-  --color-bone: #ede7dc; /* primary text on dark */
-  --color-bone-muted: #a89f92; /* secondary text on dark, 6.3:1 */
-  --color-ink: #1a1613; /* display headings and chart ink on light */
-  --color-body: #3c362e; /* body text on light, 9.2:1 */
-  --color-mute: #675f56; /* captions and labels on light, 4.9:1 */
+  --color-bone: #ece7db; /* primary text on dark */
+  --color-bone-muted: #b8b1a4; /* secondary text on dark */
+  --color-faint: #938c80; /* labels and captions on dark, 4.8:1 */
+  --color-ink: #1f1c18; /* text and chart ink on light surfaces */
+  --color-body: #3c362e; /* body text on light surfaces */
+  --color-mute: #675f56; /* captions on light surfaces */
 
   /* Accent */
-  --color-accent: #e08a38; /* orange, dark canvas only (6.2:1 on dark) */
-  --color-accent-mid: #c06a1a; /* orange for large text on cream (3.1:1) */
-  --color-accent-deep: #8a4a0d; /* orange for small text on cream (4.8:1) */
+  --color-accent: #e08a2b; /* orange on dark (6.3:1) */
+  --color-accent-soft: #efa54f; /* orange hover state */
+  --color-accent-mid: #c06a1a; /* orange for large text on cream */
+  --color-accent-deep: #8a4a0d; /* orange for small text on cream */
+  --color-on-accent-muted: #3f2d0e; /* muted dark text on orange bands, 4.9:1 */
 
   /* Rules */
-  --color-rule: #c6bda9; /* hairlines on light */
-  --color-rule-dark: #3a332c; /* hairlines on dark */
+  --color-rule: #c6bda9; /* hairlines on light surfaces */
+  --color-rule-dark: #35302a; /* hairlines on dark */
 
   /* Type */
-  --font-display: 'Oswald', 'Oswald Fallback', Arial, sans-serif;
-  --font-body: 'Source Sans 3', 'Source Sans 3 Fallback', Arial, sans-serif;
+  --font-display: 'Archivo', 'Archivo Fallback', Arial, sans-serif;
+  --font-body: 'Mulish', 'Mulish Fallback', Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', 'JetBrains Mono Fallback', monospace;
 }
 
 html {
-  scroll-padding-top: 4rem;
+  scroll-padding-top: 5rem;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -103,4 +125,29 @@ body {
   .chart-tick-alt {
     display: none;
   }
+}
+
+/* FAQ accordion: swap the +/- marker and hide the native disclosure arrow. */
+details.faq > summary {
+  list-style: none;
+}
+
+details.faq > summary::-webkit-details-marker {
+  display: none;
+}
+
+details.faq > summary .faq-closed {
+  display: inline;
+}
+
+details.faq > summary .faq-open {
+  display: none;
+}
+
+details.faq[open] > summary .faq-closed {
+  display: none;
+}
+
+details.faq[open] > summary .faq-open {
+  display: inline;
 }

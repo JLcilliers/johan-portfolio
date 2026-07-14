@@ -18,8 +18,8 @@ export default function NotFound() {
           404
         </h1>
         <p className="mt-6 max-w-xl text-lg text-bone-muted">
-          That page doesn&rsquo;t exist. The whole portfolio lives on one page, so you&rsquo;re one
-          click from all of it.
+          That page doesn&rsquo;t exist. Head back to the homepage, or jump straight to the SEO
+          results or the software.
         </p>
         <p className="mt-8">
           <Link

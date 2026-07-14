@@ -1,32 +1,32 @@
 import type { Metadata, Viewport } from 'next'
 import { headers } from 'next/headers'
 import './globals.css'
-import { SiteNav } from '@/components/site-nav'
+import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { SITE_URL, siteJsonLd } from '@/lib/site'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'SEO performance portfolio | Johan Cilliers',
+    default: 'Johan Cilliers | SEO results and the software behind them',
     template: '%s | Johan Cilliers',
   },
   description:
-    'Client SEO results measured in Google Search Console: 19 accounts with year-over-year growth, plus the software built alongside them, from MCP servers to trading bots.',
+    'SEO consultant and software developer. 19 client accounts with year-over-year organic growth verified in Google Search Console, plus the MCP servers, dashboards and AI tools built alongside them.',
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    siteName: 'Johan Cilliers SEO performance portfolio',
+    siteName: 'Johan Cilliers',
     url: SITE_URL,
     images: [
       {
         url: '/og.png',
         width: 1200,
         height: 630,
-        alt: 'SEO performance portfolio by Johan Cilliers, built on Search Console verified data',
+        alt: 'Johan Cilliers: search results, and the software behind them',
       },
     ],
   },
@@ -38,25 +38,34 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#221e1a',
+  themeColor: '#1f1c18',
 }
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const nonce = (await headers()).get('x-nonce') ?? undefined
+  const requestHeaders = await headers()
+  const nonce = requestHeaders.get('x-nonce') ?? undefined
+  const pathname = requestHeaders.get('x-pathname') ?? '/'
 
   return (
     <html lang="en">
       <head>
         <link
           rel="preload"
-          href="/fonts/oswald-latin-var.woff2"
+          href="/fonts/archivo-latin-var.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
         />
         <link
           rel="preload"
-          href="/fonts/source-sans-3-latin-var.woff2"
+          href="/fonts/mulish-latin-var.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/jetbrains-mono-latin-var.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
@@ -68,7 +77,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           nonce={nonce}
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd()) }}
         />
-        <SiteNav />
+        <SiteHeader pathname={pathname} />
         <main id="main">{children}</main>
         <SiteFooter />
       </body>

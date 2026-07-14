@@ -11,20 +11,20 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <div className="bg-cream text-body">
+    <div className="text-bone-muted">
       <div className="mx-auto max-w-[760px] px-5 py-20">
-        <p className="text-[0.72rem] font-semibold uppercase tracking-[0.3em] text-accent-deep">
+        <p className="text-[0.72rem] font-semibold uppercase tracking-[0.3em] text-accent">
           Legal
         </p>
-        <h1 className="mt-2 font-display text-[clamp(2.4rem,6vw,4rem)] font-bold uppercase leading-none text-ink">
+        <h1 className="mt-2 font-display text-[clamp(2.4rem,6vw,4rem)] font-bold uppercase leading-none text-bone">
           Terms of use
         </h1>
-        <hr className="mt-6 border-t-2 border-ink" />
-        <p className="mt-4 text-sm text-mute">Last updated: July 14, 2026</p>
+        <hr className="mt-6 border-t-2 border-bone/20" />
+        <p className="mt-4 text-sm text-faint">Last updated: July 14, 2026</p>
 
         <div className="mt-8 space-y-8 leading-relaxed">
           <section aria-labelledby="terms-use">
-            <h2 id="terms-use" className="font-display text-xl font-bold uppercase text-ink">
+            <h2 id="terms-use" className="font-display text-xl font-bold uppercase text-bone">
               Using this site
             </h2>
             <p className="mt-3">
@@ -35,7 +35,7 @@ export default function TermsPage() {
           </section>
 
           <section aria-labelledby="terms-content">
-            <h2 id="terms-content" className="font-display text-xl font-bold uppercase text-ink">
+            <h2 id="terms-content" className="font-display text-xl font-bold uppercase text-bone">
               Content and ownership
             </h2>
             <p className="mt-3">
@@ -48,7 +48,7 @@ export default function TermsPage() {
           </section>
 
           <section aria-labelledby="terms-accuracy">
-            <h2 id="terms-accuracy" className="font-display text-xl font-bold uppercase text-ink">
+            <h2 id="terms-accuracy" className="font-display text-xl font-bold uppercase text-bone">
               Accuracy and warranty
             </h2>
             <p className="mt-3">
@@ -60,7 +60,7 @@ export default function TermsPage() {
           </section>
 
           <section aria-labelledby="terms-links">
-            <h2 id="terms-links" className="font-display text-xl font-bold uppercase text-ink">
+            <h2 id="terms-links" className="font-display text-xl font-bold uppercase text-bone">
               External links
             </h2>
             <p className="mt-3">
@@ -70,7 +70,7 @@ export default function TermsPage() {
           </section>
 
           <section aria-labelledby="terms-liability">
-            <h2 id="terms-liability" className="font-display text-xl font-bold uppercase text-ink">
+            <h2 id="terms-liability" className="font-display text-xl font-bold uppercase text-bone">
               Liability and contact
             </h2>
             <p className="mt-3">
@@ -79,7 +79,7 @@ export default function TermsPage() {
               still applies. Questions go to{' '}
               <a
                 href="mailto:johanlcilliers@gmail.com"
-                className="font-semibold text-accent-deep underline underline-offset-2 hover:text-ink"
+                className="font-semibold text-accent underline underline-offset-2 hover:text-bone"
               >
                 johanlcilliers@gmail.com
               </a>

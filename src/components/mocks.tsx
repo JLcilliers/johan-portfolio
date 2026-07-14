@@ -295,7 +295,7 @@ export function SearchInsightsMock() {
 export function LuminariMock() {
   const models: [string, string, string, string][] = [
     ['ChatGPT', '81%', 'w-[81%]', 'bg-[#7fb069]'],
-    ['Claude', '74%', 'w-[74%]', 'bg-[#e08a38]'],
+    ['Claude', '74%', 'w-[74%]', 'bg-accent'],
     ['Gemini', '62%', 'w-[62%]', 'bg-[#d0a94b]'],
     ['Perplexity', '55%', 'w-[55%]', 'bg-[#7a9cc6]'],
   ]

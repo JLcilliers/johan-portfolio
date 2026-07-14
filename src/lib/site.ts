@@ -48,7 +48,7 @@ export function projectsJsonLd() {
         '@type': 'CreativeWork',
         name: project.name,
         description: project.subtitle,
-        url: `${SITE_URL}/#${project.id}`,
+        url: `${SITE_URL}/tools#${project.id}`,
         creator: { '@id': person['@id'] },
       },
     })),

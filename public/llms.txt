@@ -48,6 +48,11 @@ GitHub: https://github.com/JLcilliers
 
 ## Pages
 
-- Portfolio: https://www.johancilliers.com/
+- Home: https://www.johancilliers.com/
+- SEO results index: https://www.johancilliers.com/seo
+- Case studies: https://www.johancilliers.com/seo/[client-id], for example https://www.johancilliers.com/seo/healthy-start-florida
+- Tools and AI projects: https://www.johancilliers.com/tools
+- About: https://www.johancilliers.com/about
+- Contact: https://www.johancilliers.com/contact
 - Privacy policy: https://www.johancilliers.com/privacy
 - Terms of use: https://www.johancilliers.com/terms
