@@ -1,18 +1,7 @@
 import Link from 'next/link'
+import { NavLinks } from '@/components/nav-links'
 
-const NAV = [
-  { href: '/', label: 'Home' },
-  { href: '/seo', label: 'SEO Work' },
-  { href: '/tools', label: 'Tools & AI' },
-  { href: '/about', label: 'About' },
-] as const
-
-function isActive(pathname: string, href: string): boolean {
-  if (href === '/') return pathname === '/'
-  return pathname === href || pathname.startsWith(`${href}/`)
-}
-
-export function SiteHeader({ pathname }: { pathname: string }) {
+export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-bone/10 bg-dark/95 backdrop-blur">
       <a
@@ -29,28 +18,7 @@ export function SiteHeader({ pathname }: { pathname: string }) {
           </span>
         </Link>
         <nav aria-label="Site" className="order-3 basis-full md:order-none md:min-w-0 md:flex-1 md:basis-auto">
-          <ul className="no-scrollbar flex max-w-full items-center gap-x-7 overflow-x-auto whitespace-nowrap pt-2.5 font-display text-[12.5px] font-semibold uppercase tracking-[0.12em] md:ml-auto md:w-fit md:pt-0">
-            {NAV.map((item) => {
-              const active = isActive(pathname, item.href)
-              return (
-                <li key={item.href} className="relative py-1.5">
-                  <Link
-                    href={item.href}
-                    aria-current={active ? 'page' : undefined}
-                    className={active ? 'text-bone' : 'text-bone-muted transition-colors hover:text-accent'}
-                  >
-                    {item.label}
-                  </Link>
-                  {active ? (
-                    <span
-                      className="absolute inset-x-0 bottom-0 h-0.5 bg-accent"
-                      aria-hidden="true"
-                    />
-                  ) : null}
-                </li>
-              )
-            })}
-          </ul>
+          <NavLinks />
         </nav>
         <div className="flex shrink-0 items-center gap-3">
           <a

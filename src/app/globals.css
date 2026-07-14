@@ -120,6 +120,26 @@ body {
   display: none;
 }
 
+/* Active-link underline: one bar that slides between nav items. Position is
+   set from measured offsets via the CSSOM, so nothing needs a style nonce. */
+.nav-indicator {
+  pointer-events: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0.125rem; /* matches the h-0.5 bar it replaces, at any root font size */
+  background-color: var(--color-accent);
+  transition:
+    transform 0.2s ease-out,
+    width 0.2s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-indicator {
+    transition: none;
+  }
+}
+
 /* Chart x-axis labels: below 640px only every other month label shows. */
 @media (max-width: 639px) {
   .chart-tick-alt {

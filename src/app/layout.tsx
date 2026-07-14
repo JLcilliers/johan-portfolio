@@ -44,7 +44,6 @@ export const viewport: Viewport = {
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const requestHeaders = await headers()
   const nonce = requestHeaders.get('x-nonce') ?? undefined
-  const pathname = requestHeaders.get('x-pathname') ?? '/'
 
   return (
     <html lang="en">
@@ -77,7 +76,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           nonce={nonce}
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd()) }}
         />
-        <SiteHeader pathname={pathname} />
+        <SiteHeader />
         <main id="main">{children}</main>
         <SiteFooter />
       </body>
