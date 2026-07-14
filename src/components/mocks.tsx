@@ -140,7 +140,7 @@ export function ConnectorSuiteMock() {
     ['Ahrefs Connector', '28 tools', 'Backlinks / keywords / SERP / batch', 'bg-[#4d7c46]'],
     ['SEMrush MCP', '21 tools', 'Domain analytics / keyword research', 'bg-[#c06a1a]'],
     ['Screaming Frog MCP', '8 tools', 'Crawls / sitemaps / scheduled audits', 'bg-[#4a6b9a]'],
-    ['GBP Connector', 'OAuth', 'Locations / profile metrics / sync', 'bg-[#9a7b2d]'],
+    ['GBP Connector', 'OAuth', 'Locations / profile metrics / sync', 'bg-[#7a6222]'],
     ['Google Accounts MCP', '6 tools', 'GA4 + GSC across client accounts', 'bg-[#a33f3f]'],
     ['Google Hub MCP', 'gateway', '130+ GA4/GSC properties, one vault', 'bg-[#6b5b8e]'],
   ]
@@ -371,10 +371,10 @@ export function LuminariMock() {
 export function AnswerEngineMock() {
   const claims: [string, string, string][] = [
     ['Founded & ownership', 'Aligned across all models', 'bg-[#4d7c46]'],
-    ['Service scope', 'Partial: 2 models omit AEO', 'bg-[#9a7b2d]'],
+    ['Service scope', 'Partial: 2 models omit AEO', 'bg-[#7a6222]'],
     ['Pricing positioning', 'Conflicts with legacy content', 'bg-[#a33f3f]'],
     ['Geographic markets', 'Aligned', 'bg-[#4d7c46]'],
-    ['Differentiators', 'Weak citation in Gemini', 'bg-[#9a7b2d]'],
+    ['Differentiators', 'Weak citation in Gemini', 'bg-[#7a6222]'],
   ]
   return (
     <MockFrame
@@ -422,7 +422,7 @@ export function WebsiteAuditMock() {
   const findings: [string, string, string][] = [
     ['HIGH', 'Hero CTA below the fold on mobile', 'bg-[#a33f3f]'],
     ['HIGH', 'Missing Product schema on 14 pages', 'bg-[#a33f3f]'],
-    ['MED', 'LCP 4.1s: compress hero image', 'bg-[#9a7b2d]'],
+    ['MED', 'LCP 4.1s: compress hero image', 'bg-[#7a6222]'],
     ['LOW', 'Add trust badges near checkout', 'bg-[#4d7c46]'],
   ]
   return (
@@ -509,7 +509,7 @@ export function SiteCrawlerMock() {
             className={`grid grid-cols-[1.4fr_0.6fr_0.8fr_0.8fr_1.2fr] px-2 py-1 text-[0.55rem] text-body ${i % 2 === 1 ? 'bg-cream-row' : 'bg-bone'}`}
           >
             <span className="truncate">{page}</span>
-            <span className="font-bold text-[#4d7c46]">{status}</span>
+            <span className="font-bold text-[#3f6539]">{status}</span>
             <span>{rendered}</span>
             <span className="truncate">{emails}</span>
             <span className="truncate font-semibold text-accent-deep">{tracking}</span>
@@ -710,7 +710,7 @@ export function StatementMock() {
           </ul>
         </div>
       </div>
-      <p className="mt-2 flex items-center gap-1.5 text-[0.58rem] font-bold text-[#4d7c46]">
+      <p className="mt-2 flex items-center gap-1.5 text-[0.58rem] font-bold text-[#3f6539]">
         <span className={`${dot} bg-[#4d7c46]`} />
         Validated vs PDF metadata / 0 issues
       </p>
