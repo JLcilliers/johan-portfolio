@@ -1,6 +1,6 @@
 'use client'
 
-import { useLayoutEffect, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
@@ -25,15 +25,22 @@ type Bar = { x: number; width: number }
 export function NavLinks() {
   const pathname = usePathname()
   const [clicked, setClicked] = useState<string | null>(null)
-  const [seenPathname, setSeenPathname] = useState(pathname)
   const [bar, setBar] = useState<Bar | null>(null)
   const trackRef = useRef<HTMLDivElement>(null)
 
-  // Render-phase reset: once the route catches up, drop the optimistic value.
-  if (pathname !== seenPathname) {
-    setSeenPathname(pathname)
+  // Render-phase reset: drop the optimistic value only once the route matches
+  // it. Clearing on any pathname change would let a still-committing earlier
+  // navigation briefly pull the underline back to its own link.
+  if (clicked !== null && isActive(pathname, clicked)) {
     setClicked(null)
   }
+
+  // History navigation expresses a different intent than the pending click.
+  useEffect(() => {
+    const clear = () => setClicked(null)
+    window.addEventListener('popstate', clear)
+    return () => window.removeEventListener('popstate', clear)
+  }, [])
 
   const routeActive = NAV.find((item) => isActive(pathname, item.href))?.href ?? null
   const active = clicked ?? routeActive
