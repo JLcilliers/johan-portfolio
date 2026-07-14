@@ -1,0 +1,19 @@
+HTTP/1.1 200 OK
+Age: 0
+Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate
+Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-MjYwOTg2N2MtZDQ4Mi00MTZjLWIyZGUtOWE2YzQ2OTJhMzgx' 'strict-dynamic'; style-src 'self' 'nonce-MjYwOTg2N2MtZDQ4Mi00MTZjLWIyZGUtOWE2YzQ2OTJhMzgx'; style-src-attr 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests
+Content-Type: text/html; charset=utf-8
+Date: Tue, 14 Jul 2026 18:46:35 GMT
+Link: </_next/static/media/47df9ba1c7236d3b-s.p.7bbb93ea.woff2>; rel=preload; as="font"; crossorigin=""; nonce="MjYwOTg2N2MtZDQ4Mi00MTZjLWIyZGUtOWE2YzQ2OTJhMzgx"; type="font/woff2", </_next/static/media/9a800f173b8d9e8f-s.p.ea25be69.woff2>; rel=preload; as="font"; crossorigin=""; nonce="MjYwOTg2N2MtZDQ4Mi00MTZjLWIyZGUtOWE2YzQ2OTJhMzgx"; type="font/woff2"
+Permissions-Policy: camera=(), microphone=(), geolocation=(), browsing-topics=()
+Referrer-Policy: strict-origin-when-cross-origin
+Server: Vercel
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+Vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Matched-Path: /
+X-Vercel-Cache: MISS
+X-Vercel-Id: cpt1::iad1::p2wvk-1784054795095-0287f181e1a9
+Transfer-Encoding: chunked
+

@@ -253,7 +253,7 @@ export function SearchInsightsMock() {
         <p className="text-sm font-bold text-ink">Client SEO Report</p>
         <span className="flex gap-1.5">
           <span className={`${chip} bg-cream-row text-accent-deep`}>Mar - May 2026</span>
-          <span className={`${chip} bg-accent-mid text-white`}>Share report</span>
+          <span className={`${chip} bg-accent-deep text-white`}>Share report</span>
         </span>
       </div>
       <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
@@ -433,7 +433,7 @@ export function WebsiteAuditMock() {
     >
       <div className="flex flex-wrap items-center justify-between gap-2">
         <p className="text-sm font-bold text-ink">Website Audit · CRO + SEO</p>
-        <span className={`${chip} bg-accent-mid text-white`}>Export PDF</span>
+        <span className={`${chip} bg-accent-deep text-white`}>Export PDF</span>
       </div>
       <div className="mt-3 grid gap-3 sm:grid-cols-[1fr_150px]">
         <div>
@@ -493,7 +493,7 @@ export function SiteCrawlerMock() {
         <span className="flex-1 truncate rounded-sm border border-rule bg-bone px-2 py-1 text-[0.6rem] text-mute">
           https://example-client.com
         </span>
-        <span className={`${chip} bg-accent-mid text-white`}>Crawl site</span>
+        <span className={`${chip} bg-accent-deep text-white`}>Crawl site</span>
       </div>
       <div className="mt-2 overflow-hidden rounded-sm border border-rule">
         <div className="grid grid-cols-[1.4fr_0.6fr_0.8fr_0.8fr_1.2fr] bg-dark-inset px-2 py-1 text-[0.5rem] font-bold uppercase tracking-wide text-bone">
@@ -590,8 +590,8 @@ export function OnboardingMock() {
   const access: [string, string, string][] = [
     ['Google Analytics 4', 'Connected', 'bg-[#4d7c46]'],
     ['Search Console', 'Connected', 'bg-[#4d7c46]'],
-    ['Google Ads', 'Pending invite', 'bg-[#9a7b2d]'],
-    ['Meta Business', 'Connect', 'bg-[#c06a1a]'],
+    ['Google Ads', 'Pending invite', 'bg-[#7a6222]'],
+    ['Meta Business', 'Connect', 'bg-[#8a4a0d]'],
   ]
   const sessions: [string, string, string][] = [
     ['Tampa Mattress', 'Completed', 'text-[#a3cf96]'],
@@ -611,7 +611,7 @@ export function OnboardingMock() {
           <li key={step} className="flex items-center gap-1">
             <span
               className={`flex h-4 w-4 items-center justify-center rounded-full text-[0.5rem] font-bold ${
-                i < 3 ? 'bg-accent-mid text-white' : 'border border-rule text-mute'
+                i < 3 ? 'bg-accent-deep text-white' : 'border border-rule text-mute'
               }`}
             >
               {i + 1}
@@ -690,7 +690,7 @@ export function StatementMock() {
             ))}
           </ul>
         </div>
-        <span className="flex h-7 w-7 items-center justify-center rounded-full bg-accent-mid text-sm font-bold text-white">
+        <span className="flex h-7 w-7 items-center justify-center rounded-full bg-accent-deep text-sm font-bold text-white">
           →
         </span>
         <div className="overflow-hidden rounded-sm border border-rule">
@@ -747,7 +747,7 @@ export function LocumLinkMock() {
             <p className="text-[0.55rem] text-mute">{place}</p>
             <div className="mt-1.5 flex items-center justify-between">
               <p className="text-[0.6rem] font-bold text-accent-deep">{rate}</p>
-              <span className={`${chip} bg-accent-mid text-white`}>Apply</span>
+              <span className={`${chip} bg-accent-deep text-white`}>Apply</span>
             </div>
           </div>
         ))}
@@ -861,7 +861,7 @@ export function RankWriterMock() {
     ['Tone', 'Confident, plain'],
     ['Audience', 'Agency owners'],
     ['Reading level', 'Grade 8'],
-    ['Banned words', 'leverage, delve'],
+    ['Banned words', 'synergy, disrupt'],
     ['Targets', 'ChatGPT / Perplexity'],
   ]
   return (
