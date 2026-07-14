@@ -89,6 +89,15 @@ body {
   color: var(--color-dark);
 }
 
+/* The nav link row scrolls when it overflows, without a visible scrollbar. */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 /* Chart x-axis labels: below 640px only every other month label shows. */
 @media (max-width: 639px) {
   .chart-tick-alt {

@@ -25,7 +25,7 @@ export function SiteNav() {
         >
           Johan Cilliers
         </Link>
-        <ul className="ml-auto flex min-w-0 items-center gap-x-5 gap-y-1 overflow-x-auto whitespace-nowrap text-[0.72rem] font-semibold uppercase tracking-[0.14em]">
+        <ul className="no-scrollbar ml-auto flex min-w-0 items-center gap-x-5 gap-y-1 overflow-x-auto whitespace-nowrap text-[0.72rem] font-semibold uppercase tracking-[0.14em]">
           {links.map((link) => (
             <li key={link.href}>
               <Link href={link.href} className="text-bone-muted transition-colors hover:text-bone">
