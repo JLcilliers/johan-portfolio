@@ -1,55 +1,69 @@
-import type { Metadata } from 'next'
-import { Poppins } from 'next/font/google'
+import type { Metadata, Viewport } from 'next'
+import { headers } from 'next/headers'
+import { Oswald, Source_Sans_3 } from 'next/font/google'
 import './globals.css'
-import { ThemeProvider } from '@/lib/theme-provider'
-import { Navbar } from '@/components/layout/navbar'
-import { Footer } from '@/components/layout/footer'
-import { ChatWidget } from '@/components/chat/chat-widget'
-import { personJsonLd, websiteJsonLd } from '@/lib/json-ld'
+import { SiteNav } from '@/components/site-nav'
+import { SiteFooter } from '@/components/site-footer'
+import { SITE_URL, siteJsonLd } from '@/lib/site'
 
-const poppins = Poppins({
+const oswald = Oswald({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-poppins',
+  variable: '--font-oswald',
+  display: 'swap',
+})
+
+const sourceSans = Source_Sans_3({
+  subsets: ['latin'],
+  variable: '--font-source',
   display: 'swap',
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Johan Cilliers — SEO Leader | AI Automation Builder | Developer',
+    default: 'SEO performance portfolio | Johan Cilliers',
     template: '%s | Johan Cilliers',
   },
   description:
-    '12 years in SEO and digital marketing, global experience (Australia, Europe, North America). Deep SEO expertise, developer background, AI specialization.',
-  metadataBase: new URL(process.env.SITE_URL || 'http://localhost:3000'),
+    'Client SEO results measured in Google Search Console: 19 accounts with year-over-year growth, plus the software built alongside them, from MCP servers to trading bots.',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    siteName: 'Johan Cilliers Portfolio',
+    siteName: 'Johan Cilliers SEO performance portfolio',
+    url: SITE_URL,
+    images: [
+      {
+        url: '/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'SEO performance portfolio by Johan Cilliers, built on Search Console verified data',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
   },
   robots: { index: true, follow: true },
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export const viewport: Viewport = {
+  themeColor: '#221e1a',
+}
+
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const nonce = (await headers()).get('x-nonce') ?? undefined
+
   return (
-    <html lang="en" className="dark">
-      <head>
+    <html lang="en" className={`${oswald.variable} ${sourceSans.variable}`}>
+      <body className="antialiased">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd()) }}
+          nonce={nonce}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd()) }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd()) }}
-        />
-      </head>
-      <body className={`${poppins.variable} font-[family-name:var(--font-poppins)] antialiased bg-zinc-950 text-zinc-100 min-h-screen`}>
-        <ThemeProvider>
-          <Navbar />
-          <main className="pt-16">{children}</main>
-          <Footer />
-          <ChatWidget />
-        </ThemeProvider>
+        <SiteNav />
+        <main id="main">{children}</main>
+        <SiteFooter />
       </body>
     </html>
   )

@@ -1,16 +1,15 @@
 import type { MetadataRoute } from 'next'
+import { SITE_URL } from '@/lib/site'
+
+// AI crawlers are welcomed by name: this is a portfolio and citation is the point.
+const aiBots = ['GPTBot', 'ClaudeBot', 'PerplexityBot', 'OAI-SearchBot', 'Google-Extended']
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = process.env.SITE_URL || 'https://johancilliers.com'
-
   return {
     rules: [
-      {
-        userAgent: '*',
-        allow: '/',
-        disallow: ['/admin/', '/api/'],
-      },
+      { userAgent: '*', allow: '/' },
+      ...aiBots.map((userAgent) => ({ userAgent, allow: '/' })),
     ],
-    sitemap: `${baseUrl}/sitemap.xml`,
+    sitemap: `${SITE_URL}/sitemap.xml`,
   }
 }

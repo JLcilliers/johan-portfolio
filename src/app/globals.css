@@ -1,142 +1,58 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-background: #09090b;
-  --color-foreground: #fafafa;
-  --color-muted: #27272a;
-  --color-muted-foreground: #a1a1aa;
-  --color-border: #27272a;
-  --color-ring: #3b82f6;
-  --color-primary: #3b82f6;
-  --color-primary-foreground: #ffffff;
+  /* Canvas */
+  --color-dark: #221e1a; /* warm near-black, section covers and closing */
+  --color-dark-panel: #2b2521; /* raised panel on dark */
+  --color-dark-inset: #191512; /* mock bezels, table header bar */
+  --color-cream: #e8e2d8; /* warm bone, content pages */
+  --color-cream-row: #ddd5c6; /* alternating table row tint */
+
+  /* Text */
+  --color-bone: #ede7dc; /* primary text on dark */
+  --color-bone-muted: #a89f92; /* secondary text on dark, 6.3:1 */
+  --color-ink: #1a1613; /* display headings and chart ink on light */
+  --color-body: #3c362e; /* body text on light, 9.2:1 */
+  --color-mute: #675f56; /* captions and labels on light, 4.9:1 */
+
+  /* Accent */
+  --color-accent: #e08a38; /* orange, dark canvas only (6.2:1 on dark) */
+  --color-accent-mid: #c06a1a; /* orange for large text on cream (3.1:1) */
+  --color-accent-deep: #8a4a0d; /* orange for small text on cream (4.8:1) */
+
+  /* Rules */
+  --color-rule: #c6bda9; /* hairlines on light */
+  --color-rule-dark: #3a332c; /* hairlines on dark */
+
+  /* Type */
+  --font-display: var(--font-oswald);
+  --font-body: var(--font-source);
+}
+
+html {
+  scroll-padding-top: 4rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
-  background-color: var(--color-background);
-  color: var(--color-foreground);
+  background-color: var(--color-dark);
+  color: var(--color-bone);
+  font-family: var(--font-body);
 }
 
-.light body,
-.light {
-  --color-background: #ffffff;
-  --color-foreground: #09090b;
-  --color-muted: #f4f4f5;
-  --color-muted-foreground: #71717a;
-  --color-border: #e4e4e7;
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-dark);
 }
 
-.light body {
-  background-color: #ffffff;
-  color: #09090b;
-}
-
-.light .bg-zinc-950 {
-  background-color: #ffffff;
-}
-
-.light .bg-zinc-950\/80 {
-  background-color: rgb(255 255 255 / 0.8);
-}
-
-.light .bg-zinc-900 {
-  background-color: #f4f4f5;
-}
-
-.light .bg-zinc-900\/50 {
-  background-color: rgb(244 244 245 / 0.5);
-}
-
-.light .bg-zinc-800 {
-  background-color: #e4e4e7;
-}
-
-.light .text-white {
-  color: #09090b;
-}
-
-.light .text-zinc-100 {
-  color: #18181b;
-}
-
-.light .text-zinc-200 {
-  color: #27272a;
-}
-
-.light .text-zinc-300 {
-  color: #3f3f46;
-}
-
-.light .text-zinc-400 {
-  color: #71717a;
-}
-
-.light .text-zinc-500 {
-  color: #a1a1aa;
-}
-
-.light .text-zinc-600 {
-  color: #52525b;
-}
-
-.light .border-zinc-800 {
-  border-color: #e4e4e7;
-}
-
-.light .border-zinc-800\/50 {
-  border-color: rgb(228 228 231 / 0.5);
-}
-
-.light .border-zinc-700 {
-  border-color: #d4d4d8;
-}
-
-/* Animated gradient background */
-@keyframes blob {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  25% { transform: translate(20px, -30px) scale(1.1); }
-  50% { transform: translate(-20px, 20px) scale(0.9); }
-  75% { transform: translate(30px, 10px) scale(1.05); }
-}
-
-.animate-blob {
-  animation: blob 8s infinite ease-in-out;
-}
-
-.animation-delay-2000 {
-  animation-delay: 2s;
-}
-
-.animation-delay-4000 {
-  animation-delay: 4s;
-}
-
-/* Respect reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  .animate-blob {
-    animation: none;
+/* Chart x-axis labels: below 640px only every other month label shows. */
+@media (max-width: 639px) {
+  .chart-tick-alt {
+    display: none;
   }
-
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-
-/* Scrollbar styling */
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #3f3f46;
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #52525b;
 }
