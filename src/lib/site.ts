@@ -1,6 +1,6 @@
 import { projects } from '@/data/projects'
 
-export const SITE_URL = process.env.SITE_URL ?? 'https://johan-portfolio-sage.vercel.app'
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.johancilliers.com'
 
 const person = {
   '@type': 'Person',

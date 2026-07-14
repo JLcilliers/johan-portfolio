@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: 'Terms of use',
   description:
     'Terms of use for the portfolio site of Johan Cilliers: content ownership, accuracy, external links, and liability.',
+  alternates: {
+    canonical: '/terms',
+  },
 }
 
 export default function TermsPage() {

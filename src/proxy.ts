@@ -3,6 +3,16 @@ import { NextRequest, NextResponse } from 'next/server'
 // Generates a per-request nonce so the CSP can stay strict: scripts run only
 // with the nonce, everything else is locked to this origin.
 export function proxy(request: NextRequest) {
+  // The retired production alias forwards to the canonical host.
+  const host = request.headers.get('host')
+  if (host === 'johan-portfolio-sage.vercel.app') {
+    const url = request.nextUrl.clone()
+    url.protocol = 'https'
+    url.host = 'www.johancilliers.com'
+    url.port = ''
+    return NextResponse.redirect(url, 308)
+  }
+
   const nonce = Buffer.from(crypto.randomUUID()).toString('base64')
   const isDev = process.env.NODE_ENV === 'development'
 

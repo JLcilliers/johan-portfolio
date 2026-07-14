@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   },
   description:
     'Client SEO results measured in Google Search Console: 19 accounts with year-over-year growth, plus the software built alongside them, from MCP servers to trading bots.',
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -29,6 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
+    images: ['/og.png'],
   },
   robots: { index: true, follow: true },
 }

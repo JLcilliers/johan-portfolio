@@ -2,6 +2,7 @@
 
 > Personal portfolio of Johan Cilliers, an SEO consultant and software developer. It documents 19 client accounts where organic search grew year over year, measured in Google Search Console, plus the software built alongside the SEO work: MCP servers, dashboards, trading bots, and audit tools.
 
+Site: https://www.johancilliers.com
 Contact: johanlcilliers@gmail.com
 GitHub: https://github.com/JLcilliers
 
@@ -47,6 +48,6 @@ GitHub: https://github.com/JLcilliers
 
 ## Pages
 
-- Portfolio: /
-- Privacy policy: /privacy
-- Terms of use: /terms
+- Portfolio: https://www.johancilliers.com/
+- Privacy policy: https://www.johancilliers.com/privacy
+- Terms of use: https://www.johancilliers.com/terms

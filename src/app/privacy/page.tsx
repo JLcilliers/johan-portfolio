@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: 'Privacy policy',
   description:
     'Privacy policy for the portfolio site of Johan Cilliers: what data the site handles, what it deliberately avoids collecting, and how to get in touch.',
+  alternates: {
+    canonical: '/privacy',
+  },
 }
 
 export default function PrivacyPage() {
