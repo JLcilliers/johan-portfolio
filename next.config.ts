@@ -20,9 +20,6 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   turbopack: { root: projectRoot },
-  // Small atomic stylesheet + dynamically rendered pages: inlining removes the
-  // render-blocking CSS request, which is what throttled LCP mostly waits on.
-  experimental: { inlineCss: true },
   async headers() {
     return [
       {
