@@ -1,15 +1,29 @@
 import type { MetadataRoute } from 'next'
-import { SITE_URL } from '@/lib/site'
 
-// AI crawlers are welcomed by name: this is a portfolio and citation is the point.
-const aiBots = ['GPTBot', 'ClaudeBot', 'PerplexityBot', 'OAI-SearchBot', 'Google-Extended']
+// The site is deliberately kept out of search and AI indexes. Everything is
+// disallowed for every crawler, and the AI bots are named explicitly so the
+// intent is unambiguous. No sitemap is advertised. The authoritative signal is
+// the X-Robots-Tag header in next.config.ts; this file just asks nicely.
+const aiBots = [
+  'GPTBot',
+  'ClaudeBot',
+  'PerplexityBot',
+  'OAI-SearchBot',
+  'Google-Extended',
+  'CCBot',
+  'anthropic-ai',
+  'Bytespider',
+  'Amazonbot',
+  'Meta-ExternalAgent',
+  'Applebot-Extended',
+  'Google-CloudVertexBot',
+]
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
-      { userAgent: '*', allow: '/' },
-      ...aiBots.map((userAgent) => ({ userAgent, allow: '/' })),
+      { userAgent: '*', disallow: '/' },
+      ...aiBots.map((userAgent) => ({ userAgent, disallow: '/' })),
     ],
-    sitemap: `${SITE_URL}/sitemap.xml`,
   }
 }
